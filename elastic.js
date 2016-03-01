@@ -167,6 +167,8 @@ angular.module('monospaced.elastic', [])
                 ta.style.height = mirrorHeight + 'px';
               }
 
+              scope.$emit('elastic:finished', $ta);
+
               // small delay to prevent an infinite loop
               $timeout(function() {
                 active = false;
